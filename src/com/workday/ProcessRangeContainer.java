@@ -18,6 +18,7 @@ public class ProcessRangeContainer implements RangeContainer {
         List<Short> result = new ArrayList<>();
 
         for (short i = 0; i < data.length; i++) {
+            // add index to result if data value is in range
             if ((fromInclusive && data[i] >= fromValue || !fromInclusive && data[i] > fromValue)
                     && (toInclusive && data[i] <= toValue || !toInclusive && data[i] < toValue)) {
                 result.add(i);
